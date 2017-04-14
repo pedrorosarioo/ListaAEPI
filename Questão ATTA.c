@@ -5,14 +5,13 @@
 
 char* conserta(char *nome){
 char *r, certo[100];
-r=nome;
-if (strstr(nome, "Excelentíssimo Senhor")){
+if (strstr(nome, "ExcelentÃ­ssimo Senhor")){
     strcpy(certo, "Exmo. ");
     strcat(certo, conserta(strstr(nome, "Senhor")));
     r=certo;
     return r;
 }
-if (strstr(nome, "Excelentíssima Senhora")){
+if (strstr(nome, "ExcelentÃ­ssima Senhora")){
     strcpy(certo, "Exma. ");
     strcat(certo, conserta(strstr(nome, "Senhora")));
     r=certo;
@@ -84,7 +83,7 @@ if (strstr(nome, "Magnificencia")){
     r=certo;
     return r;
 }
-return r;
+return nome;
 }
 
 int main(){
