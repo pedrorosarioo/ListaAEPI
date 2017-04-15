@@ -91,7 +91,7 @@ char *t, entrada[100], Nomes[TAM][100];
 int i, cont=0;
 for (i=0; i<TAM; i++){
     fgets(entrada, 99, stdin);
-    if (!(strcmp(entrada, "FIM"))) break;
+    if (strstr(entrada, "FIM")) break;
     strcpy(Nomes[i], conserta(entrada));
     cont++;
     }
